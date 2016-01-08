@@ -1,5 +1,7 @@
 define([], function() {
+	'use strict';
 	return React.createClass({
+		displayName: 'Table',
 		componentDidMount: function() {
 			this.props.collection.on('add remove change reset', this.forceUpdate.bind(this, null));
 		},

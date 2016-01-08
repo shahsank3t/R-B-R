@@ -19,6 +19,7 @@ define([], function() {
 	// return Header;
 	//Using Pure JS
 	return React.createClass({
+		displayName: 'Header',
 		getInitialState: function(){
 			return {
 				myTime: new Date()
