@@ -7,6 +7,20 @@
 .footer {
 	text-align: center;
 }
-.react-img-dashboard {
+.content {
+	position: relative;
+	padding: 10px 0;
+}
+.control-label {
+	text-align: right;
+    padding-top: 8px;
+}
+.row {
+	padding-bottom: 10px;
+}
+.table > thead > tr > td {
+	text-align: center;
+}
+.table > tbody > tr > td {
 	text-align: center;
 }

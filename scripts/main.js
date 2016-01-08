@@ -27,7 +27,7 @@ require.config({
     'backbone.wreqr': 'https://cdnjs.cloudflare.com/ajax/libs/backbone.wreqr/1.3.5/backbone.wreqr.min',
     'backbone.paginator': 'https://cdnjs.cloudflare.com/ajax/libs/backbone.paginator/0.8/backbone.paginator.min',
     'text': 'https://cdnjs.cloudflare.com/ajax/libs/require-text/2.0.12/text',
-    'react':'https://fb.me/react-0.14.6',
+    'react':'https://cdnjs.cloudflare.com/ajax/libs/react/0.14.6/react-with-addons',
     'react-dom': 'https://fb.me/react-dom-0.14.6',
     'JSXTransformer': '../libs/jsx/JSXTransformer',
     'jsx': "../libs/jsx/jsx"

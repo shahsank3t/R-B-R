@@ -4,7 +4,7 @@ define([], function() {
 			this.props.collection.on('add remove change reset', this.forceUpdate.bind(this, null));
 		},
 		render: function() {
-			return ( <table>
+			return ( <table className={this.props.className}>
 				<thead>
 					<tr>
 						{this.getHeaderTDs()}

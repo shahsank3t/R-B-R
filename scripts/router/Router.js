@@ -2,6 +2,7 @@ define([
 	'require',
 	'backbone',
 ], function(require, Backbone) {	
+	'use strict';
 	var rRender;
 	var AppRouter = Backbone.Router.extend({
 		routes: {
