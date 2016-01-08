@@ -1,7 +1,7 @@
 define([], function() {
 	return React.createClass({
 		componentDidMount: function() {
-			this.props.collection.on('add remove change', this.forceUpdate.bind(this, null));
+			this.props.collection.on('add remove change reset', this.forceUpdate.bind(this, null));
 		},
 		render: function() {
 			return ( <table>
@@ -25,7 +25,8 @@ define([], function() {
 		},
 		getRowsTDs: function(model){
 			var tds = this.props.columns.map(function(column, i){
-				return (<td key={i}>{model.get(column.name)}</td>);
+				var content = column.component ? <column.component model={model} column={column}/> : model.get(column.name);
+				return (<td key={i}>{content}</td>);
 			});
 			return tds;
 		},
