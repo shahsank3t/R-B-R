@@ -15,10 +15,10 @@ define([
 				{name: 'name', title: 'Name'},
 				{name: 'action', title: 'Action', component: React.createClass({
 					handleDelete: function(e){
-						coll.remove(+e.currentTarget.dataset.id);
+						coll.remove(this.props.model);
 					},
 					render: function(){
-						return (<button type="button" data-id={this.props.model.get('id')} onClick={this.handleDelete} className="btn btn-danger btn-sm" title="Delete"><i className="fa fa-trash"></i></button>);
+						return (<button type="button" onClick={this.handleDelete} className="btn btn-danger btn-sm" title="Delete"><i className="fa fa-trash"></i></button>);
 					}
 				})}];
 		},
@@ -26,7 +26,7 @@ define([
 			return (<div className="content">
 				<div className="container">
 					<Form />
-					<Table className="table table-striped table-bordered" collection={coll} columns={this.getColumns()} />
+					<Table className="table table-striped table-bordered" collection={coll} columns={this.getColumns()} emptyText="No Employee Found !" />
 				</div>
 			</div>);
 	    }

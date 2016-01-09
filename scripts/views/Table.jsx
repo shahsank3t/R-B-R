@@ -23,6 +23,8 @@ define([], function() {
 				var tds = self.getRowsTDs(model);
 				return (<tr key={i}>{tds}</tr>);
 			});
+			if(!rows.length)
+				rows.push(<tr key="0"><td>{this.props.emptyText}</td></tr>);
 			return rows;			
 		},
 		getRowsTDs: function(model){
